@@ -1,0 +1,258 @@
+body {
+  line-height: 1.6;
+  color: #fff;
+  background: #000;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body.stop {
+  overflow: hidden;
+}
+#links {
+  position: relative;
+  transition: 1s all ease-in-out;
+}
+#page {
+  position: relative;
+  transition: 1s all ease-in-out;
+}
+#links.menuopen{
+  opacity: 0.6;
+  filter: blur(20px);
+  transform: scale(1.2);
+}
+#page.menuopen {
+  opacity: 0.6;
+  filter: blur(20px);
+  transform: scale(1.2);
+}
+#links {
+  display: flex;
+  min-height: 100vh;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  position: relative;
+}
+#links:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+}
+section {
+  display: flex;
+  min-height: 100vh;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  position: relative;
+}
+section:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+}
+section h1 {
+  font-size: 120px;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+}
+
+header {
+  z-index: 99999;
+  position: relative;
+}
+header #logo {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+  opacity: 1;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+}
+header nav {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 500px;
+  margin: 0 auto;
+  top: 120px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 200px;
+  z-index: 9;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  padding: 10px 20px;
+  line-height: 1;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+}
+header nav button {
+  -webkit-appearance: none;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  transform: scale(0);
+}
+header nav button span {
+  width: 40%;
+  background: #fff;
+  height: 2px;
+  display: block;
+  margin: 5px auto;
+  transform: scalex(0);
+  transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s margin ease-in 0s;
+}
+header nav button:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+header nav button:hover span {
+  margin: 10px auto;
+}
+
+header.sticky #logo {
+  top: 0;
+  transform: scale(0.8);
+  opacity: 0;
+  transition-delay: 0.5s;
+}
+header.sticky nav {
+  top: 20px;
+  padding: 0;
+  width: 90px;
+  height: 90px;
+  transition-delay: 0.5s;
+}
+header.sticky nav button {
+  transform: scale(1);
+  transition-delay: 0.6s;
+}
+header.sticky nav button span {
+  transform: scalex(1);
+  transition: 0.6s transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s, 0.3s margin ease-in 0s;
+}
+header.sticky nav a {
+  padding: 0;
+  opacity: 0;
+  letter-spacing: 0px;
+  transform: scale(0.3);
+  transition-delay: 0.2s;
+}
+
+#fixedlink {
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  right: 0;
+  left: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #4e4e4e;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
